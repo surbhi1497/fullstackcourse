@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Web Storage</title>
+</head>
+<body>
+<script>
+if(typeof(Storage)!=="undefined"){
+localStorage.setItem('name','Surbhi');
+console.log(localStorage.name);
+localStorage.setItem('surname','Sharma');
+console.log(localStorage.surname);
+localStorage.removeItem('surname');
+console.log(localStorage.surname);
+if(localStorage.name){
+document.getElementById('surname').innerHTML=localStorage.getItem('surname');
+}
+else{
+document.getElementById('surname').innerHTML="No surname found";
+
+}
+}
+else{
+console.log('localStorage not found');
+}
+
+
+
+if(typeof(Storage)!="undefined"){
+sessionStorage.setItem('name','Surbhi');
+console.log(sessionStorage.name);
+sessionStorage.setItem('surname','Sharma');
+console.log(sessionStorage.surname);
+sessionStorage.removeItem('surname');
+console.log(sessionStorage.surname);
+if(sessionStorage.name){
+document.getElementById('surname').innerHTML=localStorage.getItem('surname');
+}
+else{
+document.getElementById('surname').innerHTML="No surname found";
+
+}
+}
+else{
+console.log('sessionStorage not found');
+}
+</script>
+</body>
+</html>

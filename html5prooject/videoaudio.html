@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>
+Audios and Videoes</title>
+</head>
+<body>
+<h1>Videoes</h1>
+<video id="myvideo" src ="https://www.eduonix.com/dashboard/the-full-stack-web-development/lecture/15911809" controls>
+your browser does not support video
+</video>
+<h1>Audio<h1>
+<audio id="myaudio" src="http://www.freesound.org/data/previews/95/95026_57789-lq.mp3">
+Your browser does not support Audio.
+</audio>
+<div>
+<button onclick="document.getElementById('myaudio').play()">play</button>
+<button onclick="document.getElementById('myaudio').pause()">pause</button>
+<button onclick="document.getElementById('myaudio').volume+=0.1">Volume up</button>
+<button onclick="document.getElementById('myaudio').volume+=0.1">Volume down</button>
+</div>
+<script>
+var v=document.getElementById('myvideo');
+v.play();
+</script>
+</body>
+</html>
