@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>Functions and Events</title>
+	</head>
+	<body>
+		<button onclick="getDate()">Get_Date</button>
+		<br><br>
+		<button onmouseover="getDate()">Get_your_Date</button>
+		<br><br>
+		<button onmouseout ="getDate()">Get_Date</button>
+		<br><br>
+		<button ondblclick="getDate()">Get_Date_here</button>
+		<br><br>
+		<h1 id="showdate"></h1>
+		<form id="myForm">
+			<div>
+				<label>Name</label>
+				<input type="text" id="name" onblur="test()">
+				<input type="text" id="name" onfocus="test()">
+				<input type="text" id="name" onkeydown="test()">
+				<input type="text" id="name" onkeyup="test()">
+				<input type="text" id="name" onkeypress="test()">
+			</div>
+			<div>
+				<label>Email</label>
+				<input type="text" id="email">
+			</div>
+			<input type="submit" value="Submit">
+		</form>
+		<script type="text/javascript">
+			/*function fc1(){
+				alert("hello to you");
+			}
+			fc1();
+			function fc2(greeting,name='sur'){
+				//console.log(greeting+' '+name);
+				alert(greeting+' '+name);
+			}
+			fc2("Hello");
+			function sumIt(a,b){
+				//return a+b;
+			}
+			var res = sumIt(1226,245);
+			console.log("the result is "+res);
+
+*/
+			function getDate(){
+				var d=new Date();
+				alert(d);
+				//document.getElementById('showdate').innerHTML=d;
+			}
+			function submitForm(){
+				var name=document.getElementById('name').value;
+				var email=document.getElementById('email').value;
+				alert(email);
+			}
+			function test(){
+				alert('Blur');
+			}
+			document.getElementById('myForm').addEventListener('submit',submitForm,false);
+
+		</script>
+	</body>
+	</html>
